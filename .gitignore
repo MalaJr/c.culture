@@ -1,0 +1,29 @@
+# Arquivos de Sistema Operacional (OS)
+.DS_Store
+Thumbs.db
+
+# Diretório de Ambiente Virtual
+/venv/
+/env/
+
+# Arquivos de Cache do Python e Django
+__pycache__/
+*.pyc
+*.log
+/staticfiles/ # Se 'collectstatic' for usado para coletar todos os arquivos estáticos
+
+# Arquivos de Mídia e Uploads (Opcional - se houver)
+# /media/
+
+# Banco de Dados
+db.sqlite3 # Você tem este arquivo no seu projeto, mas é *altamente* recomendado não versionar o DB de desenvolvimento.
+
+# Configurações de Segurança e Local
+.env
+*.json.sample # Se você usa arquivos de configuração
+
+# IDEs
+.vscode/ # Para VS Code (se não quiser versionar configurações específicas do workspace)
+
+# Migrações
+# /cannabisculture/migrations/

@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #305d36, #98ff9d);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    background: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    height: 50px;
+    border-radius: 35px;
+    margin: 30px auto ;   
+    
+    h4{
+        color:black;
+    }
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: space-between; /* espaço entre texto e logo */
+    align-items: center;             /* alinha verticalmente */
+    max-width: 1200px;
+    margin: 0 auto;                  /* centraliza na tela */
+    padding: 0px;
+    gap: 150px;
+    flex-grow: 1;
+}
+
+.left-side {
+    flex: 1; 
+
+}
+
+.right-side {
+    flex: 1; 
+    display: flex;
+    justify-content: center; /* centraliza a logo no espaço dela */
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.logo {
+    width: 500px;
+    height: auto;
+}
+
+.box-subscribe{
+    margin-top: 20px; 
+    display: flex; 
+}
+
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+
+    p{
+        text-align: center;
+        font-size: 20px;
+        color: white;
+    }
+}
+
+input[type="email"] {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 8px; 
+    outline: none;
+}
+
+button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #e68900;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+}

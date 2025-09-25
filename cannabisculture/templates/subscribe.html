@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cannabis Culture</title>
+    <link rel="stylesheet" href="{% static 'cannabisculture/css/subscribe.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="text-header">
+            <h4>Bem-Vindo(a) ao portal!</h4>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="left-side">
+            <div class="title">
+                <h1>Cannabis Culture</h1>
+                <h5>Informação que Cultiva Consciência.</h5>
+            </div>
+
+            <div class="box-subscribe">
+                <form method="post">
+                    <p>Inscreva-se na nossa Newsletter.</p>
+                    {% csrf_token %}
+                    <input type="email" name="email" placeholder="Digite seu e-mail" required>
+                    <button type="submit">Inscrever</button>
+                </form>
+            </div>    
+        </div>
+
+        <div class="right-side">
+            <img src="{% static 'cannabisculture/img/logoverdecculture.png' %}"  class="logo">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;2025 CannabisCulture. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

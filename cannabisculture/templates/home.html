@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'cannabisculture/css/base.css' %}">
+{% endblock %}
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">🌿 CannabisCulture</a>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main class="container py-4">
+        {% block content %}
+        <h1>Bem-vindo ao CannabisCulture 🌱</h1>
+        <p>Esse é o template base do seu projeto Django.</p>
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; {{ now|date:"Y" }} CannabisCulture. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
