@@ -3,17 +3,23 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ESSENCIAL -->
     <title>Cannabis Culture</title>
-    <link rel="stylesheet" href="{% static 'cannabisculture/css/subscribe.css' %}">
-    <link rel="icon" type="image/png" href="{% static 'cannabisculture/img/logoverdecculture.png' %}"> 
+
+    <!-- Ícone e fonte -->
+    <link rel="icon" type="image/png" href="{% static 'cannabisculture/img/logoverdecculture.png' %}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="{% static 'cannabisculture/css/subscribe.css' %}">
 </head>
 
 <body>
-    <div class="grid1">
+    <!-- ================= GRID 1 ================= -->
+    <section class="grid1">
         <header>
             <div class="text-header">
-                <h4>Bem-Vindo(a) ao portal!</h4>
+                <h4>Bem-vindo(a) ao portal!</h4>
             </div>
         </header>
 
@@ -21,80 +27,81 @@
             <div class="left-side">
                 <div class="title">
                     <h1>Cannabis Culture</h1>
-                    <h5>Informação que Cultiva Consciência.</h5>
+                    <h5><strong>Informação que Cultiva Consciência.</strong></h5>
                 </div>
 
                 <div class="box-subscribe">
-                    <form method="post" action="/salvar-email/">
-                        <p>Inscreva-se na nossa Newsletter.</p>
+                    <form id="newsletter-form" method="post">
                         {% csrf_token %}
+                        <p>Inscreva-se na nossa Newsletter.</p>
                         <input type="email" name="email" placeholder="Digite seu e-mail" required>
                         <button type="submit">Inscrever</button>
-                        <p>Confirmação humana.</p>
                     </form>
-                </div>    
+                </div>
             </div>
 
             <div class="right-side">
-                <img src="{% static 'cannabisculture/img/logoverdecculture.png' %}"  class="logo">
+                <img src="{% static 'cannabisculture/img/logoverdecculture.png' %}" alt="Logo Cannabis Culture" class="logo">
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="grid2">
-
+    <!-- ================= GRID 2 ================= -->
+    <section class="grid2">
         <div class="titleGrid2">
             <h1>Cultivando informação, consciência e cultura</h1>
         </div>
-        
+
         <div class="divisaoGrid2">
-            <div class="imgGrid2">
-                <img src="{% static 'cannabisculture/img/grid2img.png' %}">
-            </div> 
             <div class="textGrid2">
-                <p>Na CANNABISCULTURE você encontra notícias, pesquisas, curiosidades e atualizações sobre a cannabis no Brasil e no mundo em diversos aspectos</p>
-                <p>Assine nossa Newsletter semanal e receba conteúdos confiáveis e fáceis de entender direto no seu e-mail, para ficar sempre por dentro do que importa</p>
+                <h2>2026 será o ano da nova era CANNABIS CULTURE!</h2>
+                <p>Na <strong>Cannabis Culture</strong>, você vai encontrar as principais notícias, pesquisas e tendências sobre a cannabis medicinal no Brasil e no mundo; tudo em um só lugar, com conteúdo confiável, didático e atualizado.</p>
+                <p>Assine nossa <strong>newsletter</strong> semanal e receba <strong>gratuitamente</strong> informações claras e de qualidade direto no seu e-mail, para se manter sempre por dentro do que realmente importa e acompanhar essa nova era da <strong>informação que cultiva consciência.</strong></p>
             </div>
-            
-            
         </div>
-    </div>
+    </section>
 
-
+    <!-- ================= FOOTER ================= -->
     <footer>
-        <div>
-            <div class= "sociais">
-                <ul class="example-2">
-                <li class="icon-content">
-                    <a
-                    data-social="instagram"
-                    aria-label="Instagram"
-                    href="https://www.instagram.com/cannabisculture_oficial/">
-                    <div class="filled"></div>
-                    <svg
-                        xml:space="preserve"
-                        viewBox="0 0 16 16"
-                        class="bi bi-instagram"
-                        fill="currentColor"
-                        height="16"
-                        width="16"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill="currentColor" d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334">
-                        </path>
-                    </svg>
-                    </a>
-                    <div class="tooltip">@cannabisculture_oficial</div>
-                </li>
-                </ul>
-            </div>
-            
-            <div class= "copyright">
-                <p>&copy;2025 CannabisCulture. Todos os direitos reservados.</p>
+        <div class="divisaoFooter">
+
+            <div class="copyright">
+
+                <p class="footer-email">
+                    Entre em contato através do nosso e-mail:
+                    <strong>cannabisculture@outlook.com.br</strong>
+                </p>
+
+                <!-- Redes sociais AGORA ficam dentro do bloco central -->
+                <div class="sociais">
+                    <ul class="example-2">
+                        <li class="icon-content">
+                            <a data-social="instagram" aria-label="Instagram"
+                            href="https://www.instagram.com/cannabisculture_oficial/"
+                            target="_blank">
+                                <div class="filled"></div>
+
+                                <svg viewBox="0 0 16 16" fill="currentColor" height="16" width="16">
+                                    <path fill="currentColor"
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.38-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334">
+                                    </path>
+                                </svg>
+                            </a>
+
+                            <div class="tooltip">@cannabisculture_oficial</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <p>&copy; 2025 Cannabis Culture. Todos os direitos reservados.</p>
+
             </div>
 
-        </div>    
+        </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'cannabisculture/js/subscribe.js' %}"></script>
 </body>
-
 </html>
