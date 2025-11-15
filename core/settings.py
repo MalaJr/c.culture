@@ -12,9 +12,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4jl$-2d4u)*+z&ba1syi6qx(dfmi2cm_e%o-#bot^ic=r3=f^5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cannabisculture.com.br', 'www.cannabisculture.com.br', '191.252.203.234']
 
 
 # Application definition
@@ -64,8 +64,15 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'cannabis_culture',
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'mongodb://191.252.203.234:27017',
+            'username': 'CANNABISCULTURE_ADMIN',
+            'password': 'VprJ3Vi9@skrG3JT',
+            'authSource': 'admin',
+        },
     }
 }
 
