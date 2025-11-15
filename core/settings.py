@@ -62,20 +62,6 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'cannabis_culture',
-        'ENFORCE_SCHEMA': False,
-        'CLIENT': {
-            'host': 'mongodb://191.252.203.234:27017',
-            'username': 'CANNABISCULTURE_ADMIN',
-            'password': 'VprJ3Vi9@skrG3JT',
-            'authSource': 'admin',
-        },
-    }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
